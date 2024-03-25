@@ -13,7 +13,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        model: [ "G970F" ]
+        model: [ "N975F" ]
 
     steps:
       - uses: actions/checkout@v3
@@ -56,7 +56,7 @@ jobs:
           ./cruelbuild config                    \
                        os_patch_level=2023-03    \
                        model=${{ matrix.model }} \
-                       name="Cruel-v5.3-okij"    \
+                       name="Cruel-v5.3"    \
                        toolchain=$TOOLCHAIN      \
                        +magisk=v27.0             \
                        +nohardening              \
